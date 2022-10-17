@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Block</title>
+</head>
+<body>
+
+<div th:insert="blocks/Header"></div>
+
+<h1>Все статьи</h1>
+<a href="/">Меню</a>
+<a href="/block/filter">Поиск статей</a>
+<a href="/block/add">Добавить статью</a>
+<div th:each="el : ${posts}">
+    <h3 th:text="${el.getTitle()}"></h3>
+    <p th:text="${el.getAnons()}"></p>
+</div>
+
+</body>
+</html>

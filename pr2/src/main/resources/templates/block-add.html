@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Добавление поста</title>
+</head>
+<body>
+<a href="/">Меню</a>
+<form th:action = "${'/block/add'}" method="post">
+    <input type="text" name="title" placeholder="Введите название статьи"><br>
+    <input type="text" name="anons" placeholder="Введите анонс статьи"><br>
+    <input type="text" name="full_text" placeholder="Введите текст статьи"><br>
+    <button type="submit">Добавить статью</button>
+</form>
+
+</body>
+</html>
